@@ -30,6 +30,8 @@
 ;; never insert tabs ... always spaces
 (setq-default indent-tabs-mode nil)
 
+(load-file "~/.emacs.d/graphviz-dot-mode.el")
+
 (add-to-list 'load-path "~/.emacs.d/scala-emacs")
 (add-to-list 'load-path "~/.emacs.d/ensime_2.10.0-0.9.8.5")
 ;; This step causes the ensime-mode to be started whenever
