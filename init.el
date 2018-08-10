@@ -1,5 +1,4 @@
-(add-to-list 'load-path "/home/sb/.emacs.d/")
-
+(add-to-list 'load-path "/home/sb/.emacs.d/misc/")
 
 ;; Theme using Solarized.  Logic is in case I switch to Emacs 24.
 ;; From http://www.xorcode.com/2011/04/11/solarized-vim-eclipse-ubuntu/
@@ -30,7 +29,7 @@
 ;; never insert tabs ... always spaces
 (setq-default indent-tabs-mode nil)
 
-(load-file "~/.emacs.d/graphviz-dot-mode.el")
+(load-file "~/.emacs.d/misc/graphviz-dot-mode.el")
 
 (add-to-list 'load-path "~/.emacs.d/scala-emacs")
 (add-to-list 'load-path "~/.emacs.d/ensime_2.10.0-0.9.8.5")
