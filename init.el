@@ -65,3 +65,7 @@
 
 ;;(autoload 'go-mode "go-mode.el" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
+
+(add-to-list 'load-path "~/.emacs.d/yaml-mode")
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
