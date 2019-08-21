@@ -3,27 +3,25 @@
 ;; Theme using Solarized.  Logic is in case I switch to Emacs 24.
 ;; From http://www.xorcode.com/2011/04/11/solarized-vim-eclipse-ubuntu/
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
-(if
-    (equal 0 (string-match "^24" emacs-version))
-    ;; it's emacs24, so use built-in theme
-    (require 'solarized-dark-theme)
-  ;; it's NOT emacs24, so use color-theme
-  (progn
-    (require 'color-theme)
-    (color-theme-initialize)
-    (require 'color-theme-solarized)
-    (color-theme-solarized-dark)))
+
+; it's emacs24, so use built-in theme
+(require 'solarized-dark-theme)
+
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" default)))
+ '(inhibit-startup-screen t)
+ '(package-selected-packages (quote (yaml-mode zenburn-theme solarized-theme))))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 ;; never insert tabs ... always spaces
@@ -57,15 +55,15 @@
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
-(require 'org-ref)
+;(require 'org-ref)
 
 
-(add-to-list 'load-path "~/.emacs.d/go-mode.el/")
-(require 'go-mode)
+;(add-to-list 'load-path "~/.emacs.d/go-mode.el/")
+;(require 'go-mode)
 
 ;;(autoload 'go-mode "go-mode.el" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
-(add-to-list 'load-path "~/.emacs.d/yaml-mode")
+;(add-to-list 'load-path "~/.emacs.d/yaml-mode")
 (require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
